@@ -44,8 +44,7 @@ class environment():
 
         yp = self.measurement(xp)
 
-        # r = 0.01*(torch.sum((yp - xc)**2,1) + 0.001*torch.sum(u**2,1))
-        r = 0.01*(torch.sum((yp)**2,1) + 0.001*torch.sum(u**2,1))
+        r = 0.01*(torch.sum((yp - xc)**2,1) + 0.001*torch.sum(u**2,1))
 
         return xp, r
 
