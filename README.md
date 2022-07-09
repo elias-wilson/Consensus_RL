@@ -14,8 +14,8 @@ the complexity even further by making the system a single dimension integrator s
 minimum but never really converge to a solid solution, and the policy network would always go unstable.
 
 ## Environmnent details:
-action dimension: 2\\
-state dimension: 4\\
+action dimension: 2\n
+state dimension: 4\n
 
 ## Dependencies:
 PyTorch
