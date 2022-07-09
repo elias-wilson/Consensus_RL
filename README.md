@@ -13,6 +13,8 @@ turned the problem into a simple regulation one. Even then I was having signific
 the complexity even further by making the system a single dimension integrator system. With the cartpole implementation, the critic network would reach some local 
 minimum but never really converge to a solid solution, and the policy network would always go unstable.
 
+I believe the issue is from poor data production or tuning. I am pretty sure the mechanics of the code are working correctly, but I could have missed something (always likely). There are some algorithms within the code that could be imporved, but I could not think of a great way of doing it. The simulation and consus controller are implemented in an element-wise fashtion, so they will execute rather quickly with the parallelizations built into PyTorch/Python (or however that works). The DDPG agents are stored in a list and are evaluted serially when finding actions or training (i.e., the code loops over the N number of agents to find actions or train. Within each of those N number of loops, BATCHES number of simulations are being considered element-wise.). This slows down the code somewhat, but I could not think of a way to abuse built in PyTorch functions that would work how I wanted. 
+
 ## Environmnent details:
 action dimension: 2  
 state dimension: 4  
