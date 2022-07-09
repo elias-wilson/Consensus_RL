@@ -20,14 +20,22 @@ state dimension: 4
 
 ## Dependencies:
 PyTorch
+
 Numpy
+
 Time
+
 Matplotlib
+
 Open AI Gym
 
 ## Files:
 cartpole_main.py - the main file that is used to train and test the agents
+
 cartpole.py - constains the physics model of the cartpole with an NLDI application that makes the dynamics xddot = u_0 and thetaddot = u_1
+
 cartpole_render.py - uses Open AI Gym's rendering tool to render the multi-cartpole system
+
 Consensus_Controller.py - creates the consensus controller object
+
 ddpg.py - DDPG implementation that uses the utils folder
